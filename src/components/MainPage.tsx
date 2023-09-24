@@ -2,6 +2,8 @@ import { ClipboardDocumentListIcon } from "@heroicons/react/20/solid";
 import NaverMap from "./Map";
 import TypeWriter from "./TypeWriter";
 import Gallery from "./Gallery";
+import Landing from "./Landing";
+import Title from "./Title";
 
 // 24902 메시지
 // 190시간 18분 21초 통화
@@ -17,16 +19,16 @@ const MainPage = () => {
   return (
     <div className="flex w-full">
       <div className="flex flex-col w-full">
-        <div className="grid grid-cols-4 gap-6">
-          <div className="col-span-2 bg-yellow-300 rounded-xl h-80">
-            Section 1
-          </div>
-          <div className="col-span-2 bg-green-300 rounded-xl h-80">
-            Section 2
-          </div>
-          <div className="col-span-2 bg-red-300 rounded-xl h-80">Section 3</div>
-          <div className="col-span-2 bg-blue-300 rounded-xl h-80">
-            Section 4
+        <div className="flex flex-col text-white bg-gradient-to-b from-color-1 via-color-1 via-50% to-slate-400">
+          <Title />
+          <Landing />
+          <div className="grid grid-cols-4 gap-6">
+            <div className="col-span-2 transition-opacity duration-700 bg-yellow-300 rounded-xl h-80">
+              Section 1
+            </div>
+            <div className="col-span-2 bg-green-300 rounded-xl h-80">
+              Section 2
+            </div>
           </div>
         </div>
         <div className="h-screen bg-gray-400">
