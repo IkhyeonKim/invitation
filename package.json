@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@toss/scroll-animation": "^1.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/navermaps": "^3.6.6",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

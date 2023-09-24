@@ -5,6 +5,20 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "NotoSansKr";
+  src: url("/NotoSansKR-VariableFont_wght.ttf") format("truetype"),
+    url("/NotoSansKR-Bold.ttf") format("truetype"),
+    url("/NotoSansKR-ExtraBold.ttf") format("truetype"),
+    url("/NotoSansKR-ExtraLight.ttf") format("truetype"),
+    url("/NotoSansKR-Light.ttf") format("truetype"),
+    url("/NotoSansKR-Medium.ttf") format("truetype"),
+    url("/NotoSansKR-Regular.ttf") format("truetype"),
+    url("/NotoSansKR-SemiBold.ttf") format("truetype"),
+    url("/NotoSansKR-Thin.ttf") format("truetype");
 }
 
 body {
@@ -13,10 +27,12 @@ body {
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-synthesis: none;
+  font-family: "NotoSansKr", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+}
+
+.text-marker {
+  font-size: clamp(8px, 10vw, 13px);
 }
