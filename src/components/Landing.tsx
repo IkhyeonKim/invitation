@@ -14,13 +14,9 @@ const Landing = () => {
     };
 
     const observer = new IntersectionObserver((entries) => {
-      console.log("@@@@@@");
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log("!!!!!!", { entry });
-
           if (!copiedRef.current) return;
-          // if (!copiedRef.current.style) return;
           copiedRef.current.style.opacity = "1";
           // intersectionCallback();
         }
@@ -37,7 +33,10 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center w-full pt-10 pb-24">
+    <div
+      ref={ref}
+      className="relative flex flex-col items-center w-full transition-opacity duration-500 delay-200 bg-center bg-no-repeat bg-contain opacity-0 h-96 bg-gyungju-grayscale"
+    >
       {/* <svg className="absolute max-w-xs md:max-w-md" viewBox="0 0 360 360">
         <path
           id="half-circle"
@@ -53,12 +52,12 @@ const Landing = () => {
         </text>
       </svg> */}
 
-      <div
+      {/* <div
         ref={ref}
         className="flex max-w-xs transition-opacity duration-500 delay-200 opacity-0 md:max-w-md"
       >
         <img src="./landing.png" />
-      </div>
+      </div> */}
     </div>
   );
 };

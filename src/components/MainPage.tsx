@@ -4,6 +4,7 @@ import TypeWriter from "./TypeWriter";
 import Gallery from "./Gallery";
 import Landing from "./Landing";
 import Title from "./Title";
+import Stars from "./Stars";
 
 // 24902 메시지
 // 190시간 18분 21초 통화
@@ -19,15 +20,22 @@ const MainPage = () => {
   return (
     <div className="flex w-full">
       <div className="flex flex-col w-full">
-        <div className="flex flex-col text-white bg-gradient-to-b from-color-1 via-color-1 via-50% to-slate-400">
+        <div className="flex relative flex-col text-white bg-gradient-to-b from-color-1 via-color-1 via-65% to-zinc-500">
+          <Stars />
           <Title />
           <Landing />
-          <div className="grid grid-cols-4 gap-6">
-            <div className="col-span-2 transition-opacity duration-700 bg-yellow-300 rounded-xl h-80">
-              Section 1
+          <div className="grid grid-rows-2 gap-2 px-5 pt-16 tracking-wider pb-52">
+            <div className="flex items-center justify-center col-span-2 text-base font-normal text-center text-white">
+              <span className="pr-2">서울 서초구 서초대로77길 37 10층</span>
+              <button>
+                <ClipboardDocumentListIcon
+                  className="w-6 h-6 text-white"
+                  onClick={onClipboardClick}
+                />
+              </button>
             </div>
-            <div className="col-span-2 bg-green-300 rounded-xl h-80">
-              Section 2
+            <div className="flex items-center justify-center col-span-2 text-base font-normal text-center text-white">
+              2023년 11월 5일 일요일 오후 1시
             </div>
           </div>
         </div>

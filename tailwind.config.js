@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'gyungju-grayscale': "url('./gyungju-grayscale.jpg')"
+      },
       colors: {
         "color-1": "#000928",
         "color-2": "#2C2856",
@@ -30,10 +33,24 @@ export default {
             borderColor: "transparent",
           },
         },
+        twinkle: {
+          "0%": {
+            opacity: 0,
+            // boxShadow: "0px 0px 30px white",
+          },
+          "50%": {
+            // boxShadow: "0px 0px 30px #d3bd3d",
+          },
+          "100%": {
+            opacity: 1,
+            // boxShadow: "0px 0px 30px white",
+          },
+        },
       },
       animation: {
         typing: "typing 3.5s steps(30, end), blink .7s infinite",
         onlyBlink: "blink .7s infinite",
+        twinkle: "twinkle 1s infinite alternate",
       },
     },
   },
