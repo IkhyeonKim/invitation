@@ -9,21 +9,21 @@ const Stars = () => {
         }}
       />
       <div
-        className="absolute w-[3px] h-[3px] rounded-full bg-zinc-300 top-20 left-[24%] animate-twinkle"
+        className="absolute w-[3px] h-[3px] rounded-full bg-zinc-300 top-20 left-[26%] animate-twinkle"
         style={{
           animationDelay: "600ms",
         }}
       />
       <div
-        className="absolute w-0.5 h-0.5 rounded-full bg-zinc-200 top-12 left-[38%] animate-twinkle"
+        className="absolute w-0.5 h-0.5 rounded-full bg-zinc-200 top-12 left-[40%] animate-twinkle"
         style={{
           animationDelay: "200ms",
         }}
       />
       <div
-        className="absolute w-1 h-1 rounded-full bg-zinc-100 top-24 left-[34%] animate-twinkle"
+        className="absolute w-[3px] h-[3px] rounded-full bg-zinc-100 top-24 left-[34%] animate-twinkle"
         style={{
-          animationDelay: "50ms",
+          animationDelay: "300ms",
         }}
       />
       <div

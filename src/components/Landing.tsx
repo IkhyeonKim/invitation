@@ -1,7 +1,8 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 
 const Landing = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const colorBgRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     if (!ref) return;
@@ -32,32 +33,34 @@ const Landing = () => {
     };
   }, []);
 
-  return (
-    <div
-      ref={ref}
-      className="relative flex flex-col items-center w-full transition-opacity duration-500 delay-200 bg-center bg-no-repeat bg-contain opacity-0 h-96 bg-gyungju-grayscale"
-    >
-      {/* <svg className="absolute max-w-xs md:max-w-md" viewBox="0 0 360 360">
-        <path
-          id="half-circle"
-          d="M 25 120 A 180 180 0 0 1 360 360"
-          fill="transparent"
-        />
-        <text
-          className="font-serif text-4xl font-extrabold"
-          fill="#000928"
-          width="360"
-        >
-          <textPath xlinkHref="#half-circle">Wedding Reception</textPath>
-        </text>
-      </svg> */}
+  useEffect(() => {
+    const onScroll = () => {
+      if (!colorBgRef.current) return;
 
-      {/* <div
+      const scrollTop = window.scrollY;
+      if (scrollTop > 350) return;
+
+      const targetValue = 260;
+      const progress = (scrollTop * 100) / targetValue;
+      colorBgRef.current.style.opacity = (progress * 0.01).toString();
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <div className="relative flex items-center justify-center">
+      <div
         ref={ref}
-        className="flex max-w-xs transition-opacity duration-500 delay-200 opacity-0 md:max-w-md"
-      >
-        <img src="./landing.png" />
-      </div> */}
+        className="relative max-w-3xl flex flex-col items-center w-full transition-opacity duration-500 delay-200 bg-center bg-no-repeat bg-cover opacity-0 h-96 max-h-[430px] bg-gyungju-grayscale"
+      ></div>
+      <div
+        ref={colorBgRef}
+        // ref={colorRef as RefObject<HTMLDivElement>}
+        className="absolute z-10 max-w-3xl flex flex-col items-center w-full transition-opacity duration-[30ms] bg-center bg-no-repeat bg-cover opacity-0 h-96 max-h-[430px] bg-gyungju-color"
+      ></div>
     </div>
   );
 };

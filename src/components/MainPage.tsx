@@ -5,6 +5,7 @@ import Gallery from "./Gallery";
 import Landing from "./Landing";
 import Title from "./Title";
 import Stars from "./Stars";
+import OurStory from "./OurStory";
 
 // 24902 메시지
 // 190시간 18분 21초 통화
@@ -20,11 +21,11 @@ const MainPage = () => {
   return (
     <div className="flex w-full">
       <div className="flex flex-col w-full">
-        <div className="flex relative flex-col text-white bg-gradient-to-b from-color-1 via-color-1 via-65% to-zinc-500">
+        <section className="flex relative flex-col text-white bg-gradient-to-b from-color-1 via-color-1 via-65% to-zinc-500">
           <Stars />
           <Title />
           <Landing />
-          <div className="grid grid-rows-2 gap-2 px-5 pt-16 tracking-wider pb-52">
+          <div className="grid grid-rows-2 gap-0.5 px-5 tracking-wider pt-10 pb-52">
             <div className="flex items-center justify-center col-span-2 text-base font-normal text-center text-white">
               <span className="pr-2">서울 서초구 서초대로77길 37 10층</span>
               <button>
@@ -38,6 +39,9 @@ const MainPage = () => {
               2023년 11월 5일 일요일 오후 1시
             </div>
           </div>
+        </section>
+        <div>
+          <OurStory />
         </div>
         <div className="h-screen bg-gray-400">
           <TypeWriter />

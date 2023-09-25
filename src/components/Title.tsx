@@ -11,7 +11,7 @@ const Title = () => {
   const translateY = (1 - scrollYProgress) * 100;
 
   return (
-    <div className="pb-16">
+    <div className="pb-10">
       <div
         ref={ref as RefObject<HTMLDivElement>}
         style={{

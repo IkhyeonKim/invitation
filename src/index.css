@@ -36,3 +36,28 @@ body {
 .text-marker {
   font-size: clamp(8px, 10vw, 13px);
 }
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 2333;
+  inherits: false;
+}
+
+.counter {
+  animation: counter 2s alternate ease-in-out;
+  counter-reset: num var(--num);
+  font: 400 30px;
+  padding: 2rem;
+}
+.counter::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 2333;
+  }
+}

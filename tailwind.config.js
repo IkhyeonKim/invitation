@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'gyungju-grayscale': "url('./gyungju-grayscale.jpg')"
+        "gyungju-grayscale": "url('./gyungju-grayscale.jpg')",
+        "gyungju-color": "url('./gyungju-color.JPG')",
       },
       colors: {
         "color-1": "#000928",
