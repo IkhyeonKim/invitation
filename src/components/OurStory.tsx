@@ -21,7 +21,7 @@ const OurStory = () => {
         className="duration-300"
       >
         <div>
-          <p className="text-base leading-7 tracking-wide">
+          <p className="text-base leading-7">
             어렸을 때부터 하고 싶은 게 많았습니다. <br />
             이젠 그것을 함께하고 싶은 사람이 생겼습니다. <br />
             오셔서 축하해주세요. <br />
@@ -30,12 +30,12 @@ const OurStory = () => {
         </div>
         <div className="pt-8">
           <p className="text-base leading-7 tracking-wide">
-            In the early days of global pandemic, of all times and places to meet, the bond between
-            Ikhyeon and I only grew stronger.
+            In the early days of global pandemic, of all times and places to
+            meet, the bond between Ikhyeon and I only grew stronger.
           </p>
           <p className="pt-2 text-base leading-7 tracking-wide">
-            I'm so grateful that I get to spend my life not only with an incredible man but with all
-            of those closest to us. <br />
+            I'm so grateful that I get to spend my life not only with an
+            incredible man but with all of those closest to us. <br />
             <b>Thanks for coming out to party!</b>
           </p>
         </div>
