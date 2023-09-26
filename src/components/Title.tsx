@@ -11,14 +11,14 @@ const Title = () => {
   const translateY = (1 - scrollYProgress) * 100;
 
   return (
-    <div className="pb-10">
+    <div className="pb-16">
       <div
         ref={ref as RefObject<HTMLDivElement>}
         style={{
           transform: `translate3d(0, ${translateY}px, 0)`,
           opacity: scrollYProgress,
         }}
-        className="pt-32 font-serif text-5xl font-normal text-center transition-opacity duration-500 delay-100 sm:text-6xl"
+        className="font-serif text-5xl font-normal text-center transition-opacity duration-500 delay-100 pt-36 sm:text-6xl"
       >
         INVITATION
       </div>

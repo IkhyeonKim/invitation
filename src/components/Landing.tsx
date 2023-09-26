@@ -19,7 +19,6 @@ const Landing = () => {
         if (entry.isIntersecting) {
           if (!copiedRef.current) return;
           copiedRef.current.style.opacity = "1";
-          // intersectionCallback();
         }
       });
     }, options);
@@ -38,9 +37,9 @@ const Landing = () => {
       if (!colorBgRef.current) return;
 
       const scrollTop = window.scrollY;
-      if (scrollTop > 350) return;
+      if (scrollTop > 360) return;
 
-      const targetValue = 260;
+      const targetValue = 360;
       const progress = (scrollTop * 100) / targetValue;
       colorBgRef.current.style.opacity = (progress * 0.01).toString();
     };
@@ -54,12 +53,11 @@ const Landing = () => {
     <div className="relative flex items-center justify-center">
       <div
         ref={ref}
-        className="relative max-w-3xl flex flex-col items-center w-full transition-opacity duration-500 delay-200 bg-center bg-no-repeat bg-cover opacity-0 h-96 max-h-[430px] bg-gyungju-grayscale"
+        className="relative max-w-3xl flex flex-col items-center w-full transition-opacity duration-500 delay-200 bg-center bg-no-repeat bg-cover opacity-0 h-96 max-h-[430px] bg-gyungju-grayscale_compressed"
       ></div>
       <div
         ref={colorBgRef}
-        // ref={colorRef as RefObject<HTMLDivElement>}
-        className="absolute z-10 max-w-3xl flex flex-col items-center w-full transition-opacity duration-[30ms] bg-center bg-no-repeat bg-cover opacity-0 h-96 max-h-[430px] bg-gyungju-color"
+        className="absolute z-10 max-w-3xl flex flex-col items-center w-full transition-opacity duration-[30ms] bg-center bg-no-repeat bg-cover opacity-0 h-96 max-h-[430px] bg-gyungju-color_compressed"
       ></div>
     </div>
   );

@@ -5,7 +5,9 @@ export default {
     extend: {
       backgroundImage: {
         "gyungju-grayscale": "url('../gyungju-grayscale.jpg')",
+        "gyungju-grayscale_compressed": "url('../gyungju-grayscale_compressed.jpg')",
         "gyungju-color": "url('../gyungju-color.JPG')",
+        "gyungju-color_compressed": "url('../gyungju-color_compressed.jpg')",
       },
       colors: {
         "color-1": "#000928",
