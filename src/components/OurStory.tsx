@@ -11,7 +11,7 @@ const OurStory = () => {
   const translateY = (1 - scrollYProgress) * 100;
 
   return (
-    <div className="px-10 pt-12 pb-24 text-blue-950 bg-gradient-to-b from-zinc-50 to-white">
+    <div className="px-8 pt-12 pb-24 text-blue-950 bg-gradient-to-b from-zinc-50 to-white">
       <div
         ref={ref as RefObject<HTMLDivElement>}
         style={{
@@ -21,7 +21,7 @@ const OurStory = () => {
         className="duration-300"
       >
         <div>
-          <p className="text-base leading-7">
+          <p className="text-base leading-7 tracking-wide">
             어렸을 때부터 하고 싶은 게 많았습니다. <br />
             이젠 그것을 함께하고 싶은 사람이 생겼습니다. <br />
             오셔서 축하해주세요. <br />

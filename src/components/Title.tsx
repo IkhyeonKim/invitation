@@ -20,11 +20,11 @@ const Title = () => {
         }}
         className="font-serif text-5xl font-normal text-center transition-opacity duration-500 delay-100 pt-36 sm:text-6xl"
       >
-        INVITATION
+        <h1>INVITATION</h1>
       </div>
-      <div className="w-full text-sm leading-7 text-center">
+      <h2 className="w-full text-sm leading-7 text-center">
         You're invited to Adam & Ikhyeon's wedding reception
-      </div>
+      </h2>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import Ending from "./Ending";
 import Gallery from "./Gallery";
 import Info from "./Info";
 import Landing from "./Landing";
@@ -34,6 +35,9 @@ const MainPage = () => {
         </section>
         <section>
           <Gallery />
+        </section>
+        <section>
+          <Ending />
         </section>
       </div>
     </div>

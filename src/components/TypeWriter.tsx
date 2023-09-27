@@ -1,5 +1,12 @@
 import { useScrollProgress } from "@toss/scroll-animation";
-import { Dispatch, RefObject, SetStateAction, memo, useRef, useState } from "react";
+import {
+  Dispatch,
+  RefObject,
+  SetStateAction,
+  memo,
+  useRef,
+  useState,
+} from "react";
 import { reservedKeywordsMap } from "../data/reservedKeywords";
 import useInterval from "../hooks/useInterval";
 
@@ -105,7 +112,7 @@ const TypeWriter = () => {
     <div className="flex flex-col">
       <div
         ref={ref as RefObject<HTMLDivElement>}
-        className="flex flex-col px-10 py-20 leading-7 text-color-1 bg-zinc-50 h-96"
+        className="flex flex-col px-8 py-20 leading-7 text-color-1 bg-zinc-50 h-96"
       >
         <>
           {animationText.map((text, index) => {
