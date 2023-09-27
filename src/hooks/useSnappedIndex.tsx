@@ -15,25 +15,14 @@ const useSnappedIndex = (scrollContainer: RefObject<HTMLElement>) => {
       }
       const copiedContainer = scrollContainer.current;
 
-      const scrollLeft = copiedContainer.scrollLeft + 240;
+      const scrollLeft = copiedContainer.scrollLeft + 266;
       const children = copiedContainer.getElementsByClassName("gallery-item");
 
-      console.log("fired");
       for (let i = 0; i < children.length; i++) {
         const child = children[i] as HTMLElement;
         const childLeft = child.offsetLeft;
         const childWidth = child.offsetWidth;
 
-        console.log({
-          scrollLeft,
-          childLeft,
-          childWidth,
-          childLeftPlusChildWidth: childLeft + childWidth,
-          i,
-          firstCondition: scrollLeft < childLeft + childWidth,
-          secondCondition: scrollLeft >= childLeft,
-          scrollX: copiedContainer.offsetWidth,
-        });
         if (scrollLeft < childLeft + childWidth && scrollLeft >= childLeft) {
           setSnappedIndex(i);
           break;
